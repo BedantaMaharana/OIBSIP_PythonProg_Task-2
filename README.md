@@ -23,17 +23,41 @@ Tool/Library and their purpose
 4.Matplotlib -> Data visualization as graphs
 5.Git & GitHub -> Version control & sharing
 
-# Steps Performed
+# Project Structure & Code Overview
 
-1. Designed a clean GUI using Tkinter
-2. Collected user input (name, weight, height)
-3. Calculated BMI and categorized it (underweight, normal, overweight, obese)
-4. Stored user data locally in a `data.csv` file
-5. Added features to:
-   - View BMI history
-   - Display BMI trend graph
-6. Implemented input validation and error handling
-7. Made the project portable and GitHub-ready
+# `main.py`
+-> Main GUI file using **Tkinter**.
+-> Handles user input, button clicks, and displays results.
+-> Calls other modules to validate input, calculate BMI, save data, show history and graph.
+
+# `utils/calculator.py`
+--> Contains logic to:
+  -> Validate weight and height.
+  -> Calculate BMI using the formula.
+  -> Categorize BMI (Underweight, Normal, Overweight, Obese).
+
+# `utils/database.py`
+-> Manages the `data.csv` file.
+-> Saves each BMI record with timestamp.
+-> Loads user-specific history for viewing or graphing.
+
+# `utils/graph.py`
+-> Uses **matplotlib** to generate a **BMI over time graph**.
+-> Pulls user data and plots BMI values by date.
+
+# `assets/data.csv`
+-> Stores all user records: name, weight, height, BMI, category, and date.
+-> Created automatically if it doesn’t exist.
+
+# `.gitignore`
+-> Prevents sensitive or auto-generated files (like `data.csv`) from being pushed to GitHub.
+
+# `requirements.txt`
+txt
+pandas
+matplotlib
+tk
+
 
 # How to Run
 
