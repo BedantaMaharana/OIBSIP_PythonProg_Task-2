@@ -27,4 +27,6 @@ replay_pid*
 .kotlin/
 
 #data file
-data.csv
+__pycache__/
+*.pyc
+assets/data.csv
